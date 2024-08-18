@@ -1,6 +1,5 @@
 import pygame
-from pygame import KEYDOWN, K_LEFT, K_RIGHT, KEYUP
-
+import random
 #initialize the pygame
 pygame.init()
 # creates the screen
@@ -17,9 +16,18 @@ playerX = 370
 playerY = 480
 playerX_change = 0
 
+#Enemey
+Enemeyimg = pygame.image.load('enemy.png')
+EnemeyX = random.randint(0, 800)
+EnemeyY = random.randint(50, 150)
+EnemeyX_change = 3
+EnemeyY_change = 0
+
 def player(x, y):
     # blit means draw
     screen.blit(playerimg,(x, y))
+def Enemey(x, y):
+    screen.blit(Enemeyimg, (x, y))
 
 #Game loop
 running = True
@@ -35,15 +43,31 @@ while running:
             elif event.key == pygame.K_RIGHT:
                 playerX_change += 3
 
-        if event.type == KEYUP:
+        if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 playerX_change = 0
                 print("key stroke is released")
 
-            #this function accepts rgb value
+        #this function accepts rgb value
         screen.fill((0, 0, 0))
         playerX += playerX_change
+        # specifying the border
+        if playerX <= 0:
+            playerX = 0
+        elif playerX >= 736:
+            playerX = 736
+
+        # specifying the border for the enemy
+        EnemeyX += EnemeyX_change
+
+
+
+        if EnemeyX <= 0:
+            EnemeyX_change = 3
+        elif EnemeyX >= 736:
+            EnemeyX_change = -3
+
         print(playerX)
         player(playerX, playerY)
+        Enemey(EnemeyX, EnemeyY)
         pygame.display.update()
-
