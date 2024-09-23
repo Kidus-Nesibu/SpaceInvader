@@ -1,7 +1,7 @@
 # main.py
 import pygame
 import sys
-from settings import SCREEN_WIDTH, SCREEN_HEIGHT, BLUE_BLACK, FPS, ALIEN_PATHS
+from settings import SCREEN_WIDTH, SCREEN_HEIGHT, BLUE_BLACK, FPS, ALIEN_PATHS, WHITE
 from player import Player
 from bullet import Bullet
 from alien import Alien
@@ -10,7 +10,7 @@ from utils import show_game_over
 def main_game():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption('Space Shooter - Faster Edition')
+    pygame.display.set_caption('Space Shooter - Slower Edition')
     clock = pygame.time.Clock()
 
     player = Player()
@@ -19,13 +19,13 @@ def main_game():
     aliens = pygame.sprite.Group()
 
     score = 0
-    alien_speed = 2  # Increased base speed
-    max_aliens_on_screen = 5
-    alien_spawn_delay = 800  # Reduced spawn delay
+    alien_speed = 1.2  # Slower base speed
+    max_aliens_on_screen = 7  # Increase the number of aliens on screen
+    alien_spawn_delay = 600  # Reduced spawn delay to get more enemies
     last_alien_spawn_time = pygame.time.get_ticks()
 
     shooting = False
-    bullet_delay = 150  # Reduced delay between bullets
+    bullet_delay = 200  # Delay between bullets remains unchanged
     last_bullet_time = pygame.time.get_ticks()
 
     running = True
@@ -82,9 +82,9 @@ def main_game():
                 return  # Game over, exit the game loop
 
         # Increase difficulty (speed and max aliens)
-        if score > 0 and score % 100 == 0:  # Faster increase in difficulty
-            alien_speed += 0.5
-            max_aliens_on_screen += 1
+        if score > 0 and score % 200 == 0:  # Slower difficulty increase
+            alien_speed += 0.2  # Smaller increase in speed
+            max_aliens_on_screen += 1  # Add 1 more alien to the screen each time
 
         # Clear screen
         screen.fill(BLUE_BLACK)
