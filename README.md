@@ -79,20 +79,20 @@ Back to top
 
 The project is divided into several key files and directories to make the code more readable:
 
-bash
+    ```bash
 
-.
-├── main.py               # The main game loop and event handling
-├── player.py             # The player's spaceship logic
-├── alien.py              # The alien enemy logic
-├── bullet.py             # Bullet firing and collision logic
-├── settings.py           # Game settings and constants
-├── utils.py              # Helper functions
-├── images/
-│   ├── spaceships/       # Spaceship images
-│   ├── enemies/          # Alien enemy images
-│   └── backgrounds/      # Background images
-└── README.md             # This file
+    .
+    ├── main.py               # The main game loop and event handling
+    ├── player.py             # The player's spaceship logic
+    ├── alien.py              # The alien enemy logic
+    ├── bullet.py             # Bullet firing and collision logic
+    ├── settings.py           # Game settings and constants
+    ├── utils.py              # Helper functions
+    ├── images/
+    │   ├── spaceships/       # Spaceship images
+    │   ├── enemies/          # Alien enemy images
+    │   └── backgrounds/      # Background images
+    └── README.md             # This file
 
 Back to top
 ## Game Preview
