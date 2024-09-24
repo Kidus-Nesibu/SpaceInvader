@@ -1,4 +1,3 @@
-```markdown
 # Space Invader Game
 
 ## Introduction
