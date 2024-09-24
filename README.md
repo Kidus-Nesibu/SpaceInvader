@@ -10,6 +10,7 @@ Welcome to my **Space Invader Game** built using the **Pygame** library! This pr
 - [How to Play](#how-to-play)
 - [File Structure](#file-structure)
 - [Game Preview](#game-preview)
+- [Demo Video](#demo-video)
 - [Challenges](#challenges)
 - [Future Improvements](#future-improvements)
 - [Credits](#credits)
