@@ -50,22 +50,20 @@ To run this game on your local machine, follow these steps:
 
 1. Clone the repository:
 
-```bash
+    ```bash
 
-git clone https://github.com/yourusername/space-invader-game.git
-cd space-invader-game 
+    git clone https://github.com/yourusername/space-invader-game.git
+    cd space-invader-game 
 
 2. Install the required dependencies:
 
-bash
-
-pip install pygame
+    ```bash
+    pip install pygame
 
 3. Run the game:
 
-bash
-
-python main.py
+    ```bash
+    python main.py
 
 Back to top
 ## How to Play
