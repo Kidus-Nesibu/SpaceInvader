@@ -53,21 +53,22 @@ To run this game on your local machine, follow these steps:
 ```bash
 
 git clone https://github.com/yourusername/space-invader-game.git
-cd space-invader-game
-    Install the required dependencies:
+cd space-invader-game 
+
+2. Install the required dependencies:
 
 bash
 
 pip install pygame
 
-    Run the game:
+3. Run the game:
 
 bash
 
 python main.py
 
 Back to top
-How to Play
+## How to Play
 
     Start the Game: After running the game, use the arrow keys to navigate the spaceship selection menu.
     Choose Your Spaceship: Preview different spaceships and backgrounds using the arrow keys, and press Enter to confirm your choice.
@@ -76,7 +77,7 @@ How to Play
     Score Points: Every alien hit increases your score, with more challenging enemies appearing as your score grows.
 
 Back to top
-File Structure
+## File Structure
 
 The project is divided into several key files and directories to make the code more readable:
 
@@ -96,17 +97,17 @@ bash
 └── README.md             # This file
 
 Back to top
-Game Preview
+## Game Preview
 
 The game features a spaceship selection screen where players can choose from different designs. During gameplay, backgrounds change dynamically based on your score.
 
 Back to top
-Demo Video
+## Demo Video
 
 Check out a video demo of the game in action here.
 
 Back to top
-Challenges
+## Challenges
 
 Building this project, I faced a few challenges:
 
@@ -115,7 +116,7 @@ Building this project, I faced a few challenges:
     Collision Detection: Implementing smooth and efficient collision detection took a few iterations to get right.
 
 Back to top
-Future Improvements
+## Future Improvements
 
 Here are a few things I plan to improve in future versions:
 
@@ -124,7 +125,7 @@ Here are a few things I plan to improve in future versions:
     Multiplayer Mode: Adding a local multiplayer mode where two players can defend against alien waves together.
 
 Back to top
-Credits
+## Credits
 
 This project was built using the Pygame library, and all spaceship and alien images are custom-designed or sourced from open graphics libraries. Thanks to the Pygame community for their excellent documentation, which made this project possible.
 
